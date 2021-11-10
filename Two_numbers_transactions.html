@@ -1,0 +1,65 @@
+<html>
+
+<body>
+
+    <label>
+        Sayi-1:
+    </label>
+    <input type="number" id="sayi_1" />
+
+    <label>
+        Sayi-2:
+    </label>
+    <input type="number" id="sayi_2" />
+
+    <button id="topla" onclick="topla()">
+        Topla
+    </button>
+
+    <button id="sirala_cift" onclick="cift()">
+        Çift
+    </button>
+
+    <button id="sirala_tek" onclick="tek()">
+        Tek
+    </button>
+
+    <div id="yaz">
+    </div>
+
+
+    <script type="text/javascript">
+        let sayi_1;
+        let sayi_2;
+        let sonuc;
+
+        function topla() {
+            sayi_1 = document.getElementById('sayi_1').value;
+            sayi_2 = document.getElementById('sayi_2').value;
+            sonuc = parseInt(sayi_1) + parseInt(sayi_2);
+            document.getElementById('yaz').innerHTML=sonuc;
+        }
+
+        function cift() {
+            sayi_1 = document.getElementById('sayi_1').value;
+            sayi_2 = document.getElementById('sayi_2').value;
+            for (let i = sayi_1 ; i < sayi_2; i++) {
+                if (i % 2 == 0) {
+                    document.getElementById('yaz').innerHTML += "<p>" + i + "<p>";
+                }
+            }
+        }
+
+        function tek() {
+            sayi_1 = document.getElementById('sayi_1').value;
+            sayi_2 = document.getElementById('sayi_2').value;
+            for (let i = sayi_1 ; i < sayi_2; i++) {
+                if (i % 2 == 1) {
+                    document.getElementById('yaz').innerHTML += "<p>" + i + "<p>";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
